@@ -8,5 +8,5 @@ namespace Clinix.Core.Interfaces;
 
 public interface IEmployeeRepository
 {
-    Task<Employee> CreateEmployee(Employee employee);
+    Task<Employee> CreateEmployeeRepoAsync(Employee employee);
 }

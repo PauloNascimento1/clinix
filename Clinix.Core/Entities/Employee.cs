@@ -7,14 +7,17 @@ namespace Clinix.Core.Entities;
 
 public class Employee : EntityBase
 {
-    public Employee(string name, PhoneNumber phoneNumber, Email email)
+    public Employee(string name, PhoneNumber phoneNumber, Email email, DateTime createdAt, bool isActive = true)
     {
         Name = name ?? throw new ArgumentNullException(nameof(name));
         PhoneNumber = phoneNumber ?? throw new ArgumentNullException(nameof(phoneNumber));
         Email = email ?? throw new ArgumentNullException(nameof(email));
+        CreatedAt = createdAt;
     }
 
-    public string Name { get; private set; } = string.Empty;
+    public string Name { get; private set; }
     public PhoneNumber PhoneNumber { get; private set; }
     public Email Email { get; private set; }
+    public DateTime CreatedAt {  get; private set; } = DateTime.Now;
+    public bool isActive { get; private set; } = true;
 }

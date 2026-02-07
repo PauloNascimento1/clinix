@@ -8,7 +8,7 @@ namespace Clinix.Infrastructure.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        public Task<Employee> CreateEmployee(Employee employee)
+        public async Task<Employee> CreateEmployeeRepoAsync(Employee employee)
         {
             throw new NotImplementedException();
         }
