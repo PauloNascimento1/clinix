@@ -24,5 +24,11 @@ namespace Clinix.API.Controllers
             return Created("Criado com Sucesso!", await _employeeService.CreateEmployeeServiceAsync(employeeDto));
         }
 
+
+        [HttpGet]
+        public async Task<ActionResult<List<GetEmployeeResponseDto>>> GetEmployees()
+        {
+            return Ok(await _employeeService.GetEmployeesServiceAsync());
+        }
     }
 }
